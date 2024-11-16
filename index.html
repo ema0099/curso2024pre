@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <h1>Restaurante Lorem</h1>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="principal">
+        <section id="productos" class="productos">
+            <h2>Productos Destacados</h2>
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta-producto">
+                    <h3>Plato 1</h3>
+                    <img src="images/menu-1.jpg" height="250" width="250"  alt="Menu 1">
+                    <a href="#">Ver Más</a>
+                </div>
+                <div class="tarjeta-producto">
+                    <h3>Plato 2</h3>
+                    <img src="images/menu-2.jpg" height="250" width="250" alt="Menu 2">
+                    <a href="#">Ver Más</a>
+                </div>
+                <div class="tarjeta-producto">
+                    <h3>Plato 3</h3>
+                    <img src="images/menu-3.jpg" height="250" width="250" alt="Menu 3">
+                    <a href="#">Ver Más</a>
+                </div>
+                <div class="tarjeta-producto">
+                    <h3>Plato 4</h3>
+                    <img src="images/menu-4.jpg" height="250" width="250" alt="Menu 4">
+                    <a href="#">Ver Más</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="reseñas" class="reseñas">
+            <h2>Reseñas de Clientes</h2>
+            <div class="contenedor-reseñas">
+                <div class="card">"Excelente producto, La presentación del plato es impecable."</div>
+                <div class="card">"El servicio al cliente fue muy atento."</div>
+                <div class="card">"¡Este plato es una fiesta en mi boca! carne jugosa."</div>
+                <div class="card">"¡Este plato, cocido a la perfección, se deshace en el paladar."</div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+
+            <!-- modify this form HTML and place wherever you want your form -->
+            <form action="https://formspree.io/f/xldebezq" method="POST">
+                <label>
+                    Tu nombre:
+                    <input type="name" name="name">
+                </label>
+                <label>
+                    Tu email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Tu mensaje:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Enviar</button>
+            </form>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2024 Test</p>
+    </footer>
+
+</body>
+
+</html>
