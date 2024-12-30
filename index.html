@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Web</title>
     <link rel="stylesheet" href="style.css">
+    <script src="carrito.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,34 +26,51 @@
 
     <main class="principal">
         <section id="productos" class="productos">
-            <h2>Productos Destacados</h2>
+            <h2>Productos con delivery (100% Sin Cargo)</h2>
             <div class="contenedor-tarjetas">
                 <div class="tarjeta-producto">
-                    <h3>Plato 1</h3>
+                    <h3>Menu 1</h3>
                     <img src="media/menu1.jpg" height="250" width="250"  alt="Menu 1">
                     <br>
-                    <a href="#">Ver Más</a>
+                    <p>Precio: $10.00</p>
+                    <button onclick="agregarAlCarrito('Menu 1', 10.00)">Agregar al Carrito</button>
+                    <a href="#"></a>
                 </div>
                 <div class="tarjeta-producto">
-                    <h3>Plato 2</h3>
+                    <h3>Menu 2</h3>
                     <img src="media/menu2.jpg" height="250" width="250" alt="Menu 2">
                     <br>
-                    <a href="#">Ver Más</a>
+                    <p>Precio: $12.00</p>
+                    <button onclick="agregarAlCarrito('Menu 2', 12.00)">Agregar al Carrito</button>
+                    <a href="#"></a>
                 </div>
                 <div class="tarjeta-producto">
-                    <h3>Plato 3</h3>
+                    <h3>Menu 3</h3>
                     <img src="media/menu3.jpg" height="250" width="250" alt="Menu 3">
                     <br>
-                    <a href="#">Ver Más</a>
+                    <p>Precio: $15.00</p>
+                    <button onclick="agregarAlCarrito('Menu 3', 15.00)">Agregar al Carrito</button>
+                    <a href="#"></a>
                 </div>
                 <div class="tarjeta-producto">
-                    <h3>Plato 4</h3>
+                    <h3>Menu 4</h3>
                     <img src="media/menu4.jpg" height="250" width="250" alt="Menu 4">
                     <br>
-                    <a href="#">Ver Más</a>
+                    <p>Precio: $20.00</p>
+                    <button onclick="agregarAlCarrito('Menu 4', 20.00)">Agregar al Carrito</button>
+                    <a href="#"></a>
                 </div>
             </div>
         </section>
+
+        <button id="carrito-btn">Carrito</button>
+        <div id="carrito-dropdown" class="carrito-dropdown">
+            <h2>Carrito de Compras</h2>
+            <div id="lista-carrito-dropdown">
+                <p>Tu carrito está vacío.</p>
+            </div>
+            <p>Total: $<span id="total-carrito-dropdown">0.00</span></p>
+        </div>
 
         <section id="reseñas" class="reseñas">
             <h2>Reseñas de Clientes</h2>
@@ -86,6 +104,7 @@
             </form>
             </form>
         </section>
+
     </main>
 
     <footer class="pie">
