@@ -15,6 +15,13 @@ function eliminarDelCarrito(index) {
     actualizarCarrito();
 }
 
+function finalizarCompra() {
+    carrito = [];
+    total = 0;
+    localStorage.removeItem('carrito');
+    actualizarCarrito();
+}
+
 function actualizarCarrito() {
     const listaCarritoDropdown = document.getElementById('lista-carrito-dropdown');
     const totalCarritoDropdown = document.getElementById('total-carrito-dropdown');
@@ -31,6 +38,11 @@ function actualizarCarrito() {
         itemElement.appendChild(deleteButton);
         listaCarritoDropdown.appendChild(itemElement);
     });
+
+    const finalizarButton = document.createElement('button');
+    finalizarButton.textContent = 'Finalizar Compra';
+    finalizarButton.addEventListener('click', finalizarCompra);
+    listaCarritoDropdown.appendChild(finalizarButton);
 
     totalCarritoDropdown.textContent = total.toFixed(2);
 }
